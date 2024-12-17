@@ -14,8 +14,8 @@ We want unit getter and setter functions. For anything where
 2-byte address makes sense. eeprom, flash, sram.
 
 ```C++
-  TBool GetLength_Workmem(TUint_2 * Length, TAsciiz Addr);
-  TBool GetLength_Progmem(TUint_2 * Length, TAsciiz Addr);
+TBool GetLength_Workmem(TUint_2 * Length, TAsciiz Addr);
+TBool GetLength_Progmem(TUint_2 * Length, TAsciiz Addr);
 ```
 
 ## Code
