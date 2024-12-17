@@ -10,8 +10,9 @@ Count length of zero-byte sequence. Supports program memory.
 
 ## Design
 
-We want unit getter and setter functions. For anything where
-2-byte address makes sense. eeprom, flash, sram.
+`GetLength(Asciiz)` fitted into more generic "failable three-address
+instruction" pattern. Just kidding. Get-length for SRAM and Flash
+that fails on bad addresses.
 
 ```C++
 TBool GetLength_Workmem(TUint_2 * Length, TAsciiz Addr);
