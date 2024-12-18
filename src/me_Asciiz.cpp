@@ -8,7 +8,7 @@
 #include <me_Asciiz.h>
 
 #include <me_WorkMemory.h>
-#include <me_FlashMemory.h>
+#include <me_ProgramMemory.h>
 
 using namespace me_Asciiz;
 
@@ -64,7 +64,7 @@ TBool me_Asciiz::GetLength_Progmem(
     CountTillZero(
       Length,
       (TAddress) Asciiz,
-      (TOperation) me_FlashMemory::GetByte
+      (TOperation) me_ProgramMemory::GetByte
     );
 }
 
