@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-12-17
+  Last mod.: 2024-12-18
 */
 
 #include <me_Asciiz.h>
@@ -15,7 +15,7 @@ using namespace me_Asciiz;
 TBool CountTillZero(
   TUint_2 * NumUnits,
   TAddress Addr,
-  TResponsiveMethod GetByte
+  TOperation GetByte
 )
 {
   TUint_1 Byte;
@@ -51,7 +51,7 @@ TBool me_Asciiz::GetLength_Workmem(
     CountTillZero(
       Length,
       (TAddress) Asciiz,
-      (TResponsiveMethod) me_WorkMemory::GetByte
+      (TOperation) me_WorkMemory::GetByte
     );
 }
 
@@ -64,7 +64,7 @@ TBool me_Asciiz::GetLength_Progmem(
     CountTillZero(
       Length,
       (TAddress) Asciiz,
-      (TResponsiveMethod) me_FlashMemory::GetByte
+      (TOperation) me_FlashMemory::GetByte
     );
 }
 
