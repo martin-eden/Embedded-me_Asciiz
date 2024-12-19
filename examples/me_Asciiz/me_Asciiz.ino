@@ -1,10 +1,14 @@
 // [me_Asciiz] Compilation test
 
+/*
+  Author: Martin Eden
+  Last mod.: 2024-12-19
+*/
+
 #include <me_Asciiz.h>
 
 #include <me_Console.h>
 #include <me_Uart.h>
-#include <me_UartSpeeds.h>
 #include <me_BaseTypes.h>
 
 void RunTest()
@@ -21,7 +25,7 @@ void RunTest()
 
 void setup()
 {
-  me_Uart::Init(me_UartSpeeds::Bps_115k);
+  me_Uart::Init(me_Uart::Speed_115k_Bps);
 
   RunTest();
 
@@ -31,3 +35,7 @@ void setup()
 void loop()
 {
 }
+
+/*
+  2024-12-17
+*/
