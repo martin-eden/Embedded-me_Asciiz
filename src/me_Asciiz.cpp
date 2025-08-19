@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-12-18
+  Last mod.: 2025-08-19
 */
 
 #include <me_Asciiz.h>
@@ -51,7 +51,7 @@ TBool me_Asciiz::GetLength_Workmem(
     CountTillZero(
       Length,
       (TAddress) Asciiz,
-      (TOperation) me_WorkMemory::GetByte
+      (TOperation) me_WorkMemory::GetByteFrom
     );
 }
 
