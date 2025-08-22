@@ -1,8 +1,8 @@
-// [Asciiz] implementation
+// ASCIIZ length calculation
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-19
+  Last mod.: 2025-08-22
 */
 
 #include <me_Asciiz.h>
@@ -12,6 +12,9 @@
 
 using namespace me_Asciiz;
 
+/*
+  Count till zero byte
+*/
 TBool CountTillZero(
   TUint_2 * NumUnits,
   TAddress Addr,
@@ -42,6 +45,9 @@ TBool CountTillZero(
   return Result;
 }
 
+/*
+  Count length of ASCIIZ in RAM
+*/
 TBool me_Asciiz::GetLength_Workmem(
   TUint_2 * Length,
   TAsciiz Asciiz
@@ -55,6 +61,9 @@ TBool me_Asciiz::GetLength_Workmem(
     );
 }
 
+/*
+  Count length of ASCIIZ in Flash
+*/
 TBool me_Asciiz::GetLength_Progmem(
   TUint_2 * Length,
   TAsciiz Asciiz
@@ -64,7 +73,7 @@ TBool me_Asciiz::GetLength_Progmem(
     CountTillZero(
       Length,
       (TAddress) Asciiz,
-      (TOperation) me_ProgramMemory::GetByte
+      (TOperation) me_ProgramMemory::GetByteFrom
     );
 }
 

@@ -1,8 +1,8 @@
-// Asciiz
+// ASCIIZ length calculation
 
 /*
   Author: Martin Eden
-  Last mod.: 2024-12-17
+  Last mod.: 2025-08-22
 */
 
 #pragma once
@@ -11,11 +11,13 @@
 
 namespace me_Asciiz
 {
+  // Get length of ASCIIZ in RAM
   TBool GetLength_Workmem(
     TUint_2 * Length,
     TAsciiz Addr
   );
 
+  // Get length of ASCIIZ in Flash
   TBool GetLength_Progmem(
     TUint_2 * Length,
     TAsciiz Addr
@@ -24,4 +26,5 @@ namespace me_Asciiz
 
 /*
   2024-12-17
+  2025-08-22
 */

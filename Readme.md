@@ -10,8 +10,8 @@ Count length of zero-byte sequence. Supports program memory.
 
 ## Design
 
-`GetLength(Asciiz)` fitted into more generic "failable three-address
-instruction" pattern. Just kidding. Get-length for SRAM and Flash
+`GetLength(Asciiz)` wrapped into more generic "failable three-address
+instruction" pattern. I mean it's get-length for SRAM and Flash
 that fails on bad addresses.
 
 ```C++
