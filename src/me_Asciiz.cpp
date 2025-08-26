@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-22
+  Last mod.: 2025-08-26
 */
 
 #include <me_Asciiz.h>
@@ -21,6 +21,12 @@ TBool CountTillZero(
   TOperation GetByte
 )
 {
+  /*
+    That's simple and practical implementation
+
+    But Address variable theoretically can overflow.
+  */
+
   TUint_1 Byte;
   TUint_2 NumUnitsProcessed = 0;
   TBool Result = true;
