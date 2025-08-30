@@ -8,21 +8,20 @@ Count length of zero-byte sequence. Supports program memory.
 (Functionally same as `strlen` and `strlen_P`.)
 
 
-## Design
+## Obsolete
 
-`GetLength(Asciiz)` wrapped into more generic "failable three-address
-instruction" pattern. I mean it's get-length for SRAM and Flash
-that fails on bad addresses.
+This module is deprecated and should not be used.
 
-```C++
-TBool GetLength_Workmem(TUint_2 * Length, TAsciiz Addr);
-TBool GetLength_Progmem(TUint_2 * Length, TAsciiz Addr);
-```
+Getting ASCIIZ length in RAM is scope of `[me_WorkmemTools]`.
+Getting ASCIIZ length from other memories is not possible
+(never needed).
+
 
 ## Code
 
 * [Interface][Interface]
 * [Implementation][Implementation]
+* [Example][Example]
 
 
 ## Requirements
@@ -33,8 +32,7 @@ TBool GetLength_Progmem(TUint_2 * Length, TAsciiz Addr);
 
 ## Install/remove
 
-Easy way is to clone [GetLibs][GetLibs] repo and run it's code.
-Lacking of local repo catalogue in Arduino IDE sucks.
+Git clone.
 
 
 ## See also
@@ -42,10 +40,10 @@ Lacking of local repo catalogue in Arduino IDE sucks.
 * [My other embedded C++ libraries][Embedded]
 * [My other repositories][Repos]
 
+
 [Interface]: src/me_Asciiz.h
 [Implementation]: src/me_Asciiz.cpp
-
-[GetLibs]: https://github.com/martin-eden/Embedded-Framework-GetLibs
+[Example]: examples/me_Asciiz/me_Asciiz.ino
 
 [Embedded]: https://github.com/martin-eden/Embedded_Crafts/tree/master/Parts
 [Repos]: https://github.com/martin-eden/contents
