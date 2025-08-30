@@ -2,10 +2,13 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-08-26
+  Last mod.: 2025-08-30
 */
 
 #include <me_Asciiz.h>
+
+#include <me_BaseTypes.h>
+#include <me_BaseInterfaces.h>
 
 #include <me_WorkMemory.h>
 #include <me_ProgramMemory.h>
@@ -79,7 +82,7 @@ TBool me_Asciiz::GetLength_Progmem(
     CountTillZero(
       Length,
       (TAddress) Asciiz,
-      (TOperation) me_ProgramMemory::GetByteFrom
+      (TOperation) me_ProgramMemory::GetByteAt
     );
 }
 
