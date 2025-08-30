@@ -14,7 +14,7 @@ This module is deprecated and should not be used.
 
 Getting ASCIIZ length in RAM is scope of `[me_WorkmemTools]`.
 Getting ASCIIZ length from other memories is not possible
-(never needed).
+(was never needed).
 
 
 ## Code
